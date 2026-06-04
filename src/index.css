@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #0F766E;
+  --color-teal-light: #14B8A6;
+  --color-teal-dark: #0B4F4A;
+  --color-navy: #0F2942;
+  --color-navy-light: #1E3A5F;
+  --color-coral: #FF6B5E;
+  --color-amber: #F5A623;
+  --color-ivory: #FBFAF7;
+  --color-mist: #EEF4F3;
+  --color-sage: #DCE9E6;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    --color-teal: #0F766E;
+    --color-teal-light: #14B8A6;
+    --color-teal-dark: #0B4F4A;
+    --color-navy: #0F2942;
+    --color-coral: #FF6B5E;
+    --color-amber: #F5A623;
+    --color-ivory: #FBFAF7;
+    --color-mist: #EEF4F3;
+    --color-sage: #DCE9E6;
+    --color-text: #14241E;
+    --color-text-muted: #5C6B66;
+    --color-border: #E2EBE8;
+  }
+
+  body {
+    @apply font-sans bg-[var(--color-ivory)] text-[var(--color-text)] overflow-x-hidden antialiased;
+  }
+
+  /* Hindi/Devanagari fallback fonts when lang=hi */
+  html[lang="hi"] body,
+  html[lang="hi"] input,
+  html[lang="hi"] textarea,
+  html[lang="hi"] select,
+  html[lang="hi"] button {
+    font-family: "Noto Sans Devanagari", "DM Sans", sans-serif;
+  }
+
+  html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3,
+  html[lang="hi"] h4, html[lang="hi"] h5, html[lang="hi"] h6,
+  html[lang="hi"] .font-serif {
+    font-family: "Noto Serif Devanagari", "Cormorant Garamond", serif;
+  }
+
+  /* Prevent Devanagari text distortion/overlapping by relaxing line-heights globally in Hindi */
+  html[lang="hi"] body {
+    line-height: 1.6 !important;
+  }
+  html[lang="hi"] p {
+    line-height: 1.65 !important;
+  }
+  html[lang="hi"] .text-display {
+    line-height: 1.25 !important;
+  }
+  html[lang="hi"] .leading-none {
+    line-height: 1.25 !important;
+  }
+  html[lang="hi"] .leading-tight {
+    line-height: 1.35 !important;
+  }
+  html[lang="hi"] h1,
+  html[lang="hi"] h2,
+  html[lang="hi"] h3,
+  html[lang="hi"] h4,
+  html[lang="hi"] h5,
+  html[lang="hi"] h6 {
+    line-height: 1.25 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold tracking-tight;
+  }
+
+  .text-label {
+    @apply font-sans tracking-[0.18em] uppercase text-xs font-bold text-[var(--color-teal)];
+  }
+
+  .text-display {
+    @apply font-serif font-bold leading-[0.92] text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem];
+  }
+}
+
+/* Spotlight cursor */
+.spotlight-cursor {
+  @apply fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9999];
+  background: radial-gradient(circle, rgba(20,184,166,0.35) 0%, rgba(20,184,166,0) 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.spotlight-cursor.big {
+  @apply w-24 h-24;
+}
+
+.cursor-ring {
+  @apply fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] bg-[var(--color-teal)];
+  transform: translate(-50%, -50%);
+}
+
+/* Pill button base */
+.pill-btn {
+  @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-sans font-semibold text-sm transition-all duration-300 whitespace-nowrap;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--color-mist); }
+::-webkit-scrollbar-thumb { background: var(--color-teal); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-teal-dark); }
+
+.word-span { display: inline-block; overflow: hidden; }
+.word-span > span { display: inline-block; }
+
+/* Prevent clipping of Hindi vowel markers inside AnimatedText spans */
+html[lang="hi"] .word-span {
+  overflow: visible !important;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+@keyframes blob {
+  0%, 100% { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; }
+  50% { border-radius: 58% 42% 37% 63% / 56% 59% 41% 44%; }
+}
+.animate-blob { animation: blob 12s ease-in-out infinite; }
+
+@keyframes marquee-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-x { animation: marquee-x 28s linear infinite; }

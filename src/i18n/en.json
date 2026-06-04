@@ -1,0 +1,292 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "departments": "Departments",
+    "hospital": "Hospital",
+    "facilities": "Facilities",
+    "admissions": "Admissions",
+    "news": "News",
+    "contact": "Contact",
+    "emergency": "Emergency",
+    "bookAppointment": "Book Appointment",
+    "collegeHospital": "College & Hospital",
+    "brandName": "KMC Medical College"
+  },
+  "hero": {
+    "badge": "NABH Accredited · Maharajganj, Uttar Pradesh",
+    "line1": "Excellence in",
+    "line2": "Medicine &",
+    "line3": "Healthcare",
+    "subtitle": "A unit of Shanti Foundation, operating under PPP mode with the State Government of Uttar Pradesh — delivering compassionate care and world-class medical education.",
+    "exploreBtn": "Explore Departments",
+    "contactBtn": "Contact Us",
+    "trustText": "Trusted by 10,000+ patients yearly",
+    "marquee": {
+      "rank1": "9th Best Emerging Medical College — India Today 2023",
+      "rank2": "3rd Private Medical College North Zone — The Week 2023",
+      "rank3": "NABH Accredited",
+      "rank4": "SKOCH Award 2022",
+      "rank5": "QCI A-Grade Excellence"
+    },
+    "stats": {
+      "beds": "Hospital Beds",
+      "departments": "Departments"
+    }
+  },
+  "trust": {
+    "beds": "Hospital Beds",
+    "departments": "Departments",
+    "faculty": "Faculty & Staff",
+    "patients": "Patients Annually"
+  },
+  "about": {
+    "label": "About KMC",
+    "title": "Healing lives. Shaping doctors. Serving humanity.",
+    "para1": "KMC Medical College and Hospital is a premier institution bridging the gap in accessible healthcare while training the next generation of medical professionals with state-of-the-art facilities and a deep sense of compassion.",
+    "yearsOfCare": "Years of Care",
+    "readMore": "Read our full story",
+    "points": {
+      "p1": "Established under Shanti Foundation (Feb 2012)",
+      "p2": "Affiliated to ABVMU University",
+      "p3": "PPP mode with Govt. of Uttar Pradesh",
+      "p4": "Comprehensive Ayushman Bharat coverage"
+    }
+  },
+  "rankings": {
+    "label": "Recognition",
+    "title1": "Nationally recognized,",
+    "title2": "consistently ranked.",
+    "rising": "Rising every year",
+    "items": {
+      "i1": { "year": "2023", "pub": "India Today", "rank": "9th", "desc": "Best Emerging Medical College" },
+      "i2": { "year": "2023", "pub": "India Today", "rank": "35th", "desc": "Top Medical College in India" },
+      "i3": { "year": "2023", "pub": "The Week", "rank": "3rd", "desc": "Private College, North Zone" },
+      "i4": { "year": "2023", "pub": "Outlook-iCARE", "rank": "10th", "desc": "Private Medical College" },
+      "i5": { "year": "2022", "pub": "SKOCH", "rank": "Award", "desc": "Healthcare Excellence" },
+      "i6": { "year": "Active", "pub": "QCI", "rank": "'A'", "desc": "Certificate of Excellence" }
+    }
+  },
+  "deptScroll": {
+    "label": "Departments",
+    "title1": "Every specialty.",
+    "title2": "One destination.",
+    "viewAll": "View all",
+    "exploreAll": "Explore all 25+ departments",
+    "items": {
+      "generalMed": "General Medicine",
+      "pediatrics": "Pediatrics",
+      "cardiology": "Cardiology",
+      "orthopaedics": "Orthopaedics",
+      "anatomy": "Anatomy"
+    },
+    "categories": {
+      "clinical": "Clinical",
+      "superSpec": "Super Speciality",
+      "preClinical": "Pre-Clinical"
+    }
+  },
+  "hospital": {
+    "label": "Hospital Services",
+    "title": "Advanced care, compassionate healing.",
+    "alwaysOpen": "ALWAYS OPEN",
+    "emergencyTitle": "24×7 Emergency",
+    "emergencyDesc": "Our state-of-the-art trauma center is ready for any critical situation, day or night.",
+    "callBtn": "Call 05523-350400",
+    "viewAll": "View all hospital services",
+    "services": {
+      "pharmacy": { "t": "Pharmacy", "d": "24/7 in-house pharmacy with essential medicines." },
+      "bloodBank": { "t": "Blood Bank", "d": "Fully equipped blood & component unit." },
+      "radio": { "t": "Radiodiagnosis", "d": "CT, MRI, X-Ray & ultrasound facilities." },
+      "icu": { "t": "ICU / NICU / PICU", "d": "Critical care for adults & children." },
+      "cath": { "t": "Cath Lab", "d": "Advanced cardiology procedures." }
+    }
+  },
+  "testimonials": {
+    "label": "Voices of Trust",
+    "title": "What our patients & students say.",
+    "t1": { "n": "Ramesh Kumar", "r": "Patient — Trauma Unit", "q": "The emergency team saved my life. The doctors were quick, caring, and professional. I am forever grateful to KMC Hospital." },
+    "t2": { "n": "Neha Singh", "r": "Mother — NICU", "q": "My newborn received excellent care in the NICU. The staff were compassionate and treated us like family." },
+    "t3": { "n": "Dr. Abhishek Yadav", "r": "Resident Doctor", "q": "Being part of KMC Medical College has been an incredible learning experience with exposure to advanced facilities every day." },
+    "t4": { "n": "Sunita Devi", "r": "Ayushman Bharat Beneficiary", "q": "Treatment under Ayushman Bharat was smooth and affordable. I received quality care without worrying about expenses." }
+  },
+  "facilities": {
+    "label": "Campus Facilities",
+    "title": "World-class infrastructure.",
+    "exploreCampus": "Explore campus",
+    "items": {
+      "library": "Central Library",
+      "lectures": "Lecture Theatres",
+      "skillLab": "Skill Lab",
+      "hostels": "Hostels & Mess"
+    }
+  },
+  "news": {
+    "latestNotices": "Latest Notices",
+    "newsEvents": "News & Events",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "tags": { "admissions": "Admissions", "exams": "Exams", "notice": "Notice" },
+    "notices": {
+      "n1": "Renewal of Undergraduate Seats (MBBS) AY-2025-26 (2nd Batch)",
+      "n2": "Schedule for Internal Assessment Examinations Phase I MBBS",
+      "n3": "Anti-Ragging Committee Meeting Minutes Published"
+    },
+    "events": {
+      "e1": "KMC Hosts National Medical Conference on Critical Care",
+      "e2": "Free Health Checkup Camp Organized in Maharajganj"
+    }
+  },
+  "cta": {
+    "tag": "We're here for you",
+    "title": "Your health, our mission.",
+    "desc": "Book an appointment with our specialists or reach our 24/7 emergency response team immediately.",
+    "bookBtn": "Book Appointment",
+    "emergency": "Emergency: 05523-350400"
+  },
+  "footer": {
+    "ctaTitle": "Your health, our mission.",
+    "ctaDesc": "Reach our 24/7 emergency team or book an appointment with a specialist today.",
+    "ctaBtn": "Get in touch",
+    "tagline": "A Unit of Shanti Foundation. Healing lives, shaping doctors, and serving humanity under PPP mode with the Govt. of Uttar Pradesh.",
+    "explore": "Explore",
+    "reachUs": "Reach Us",
+    "helplines": "Helplines",
+    "emergencyLbl": "Emergency",
+    "admissionsLbl": "Admissions",
+    "tollFreeLbl": "Toll Free",
+    "studentPortal": "Student Portal",
+    "address": "Mahuawa, Farenda Road, Maharajganj, UP 273303",
+    "copyright": "KMC Maharajganj Medical College & Hospital · A Unit of Shanti Foundation",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "contact": {
+    "label": "Contact Us",
+    "title": "We're here when you need us.",
+    "hospitalAddress": "Hospital Address",
+    "open247": "Open 24/7",
+    "contactNumbers": "Contact Numbers",
+    "hospital": "Hospital",
+    "college": "College",
+    "tollFree": "Toll Free",
+    "emailSupport": "Email Support",
+    "sendMessage": "Send us a message",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "department": "Department",
+    "message": "Message",
+    "selectDept": "Select a department",
+    "deptOptions": {
+      "admissions": "Admissions",
+      "emergency": "Emergency",
+      "general": "General Medicine",
+      "other": "Other"
+    },
+    "submit": "Submit Message",
+    "sending": "Sending...",
+    "required": "This field is required",
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "+91",
+      "message": "How can we help you?"
+    }
+  },
+  "deptPage": {
+    "label": "Departments",
+    "title": "Comprehensive. Compassionate. Clinical.",
+    "categories": {
+      "all": "All",
+      "preClinical": "Pre-Clinical",
+      "paraClinical": "Para-Clinical",
+      "clinical": "Clinical",
+      "superSpec": "Super Speciality"
+    }
+  },
+  "hospitalPage": {
+    "label": "Hospital",
+    "title": "Advanced care. 24×7 commitment.",
+    "subtitle": "A multi-specialty hospital supported by modern technology and a dedicated team of professionals.",
+    "alwaysOpen": "Always Open",
+    "emergencyTitle": "24×7 Emergency Care",
+    "emergencyDesc": "Our trauma center never sleeps. Reach our emergency line for immediate assistance."
+  },
+  "facilitiesPage": {
+    "label": "Facilities",
+    "title": "Spaces designed to inspire.",
+    "subtitle": "From state-of-the-art labs to comfortable residences, every facility supports learning and healing."
+  },
+  "admissionsPage": {
+    "label": "Admissions",
+    "title": "Shape your future in medicine.",
+    "subtitle": "Join a nationally recognized MBBS program with hands-on clinical exposure from day one.",
+    "mbbsProgram": "MBBS Program",
+    "mbbsDesc": "100 seats · 4.5 years + 1 year internship",
+    "feeStructure": "Fee Structure",
+    "feeDesc": "Transparent fees with stipend support",
+    "nmcCompliant": "NMC Compliant",
+    "nmcDesc": "Fully compliant with NMC-1.3 norms",
+    "howToApply": "How to apply",
+    "steps": {
+      "s1t": "Qualify NEET-UG", "s1d": "Appear and qualify the national entrance exam.",
+      "s2t": "Counselling", "s2d": "Participate in state / all-India counselling.",
+      "s3t": "Document Verification", "s3d": "Submit and verify required documents.",
+      "s4t": "Admission Confirmed", "s4d": "Pay fees and join the MBBS program."
+    },
+    "readyTitle": "Ready to begin your journey?",
+    "readyDesc": "Register your MBBS query and our admissions team will guide you through every step.",
+    "registerBtn": "Register MBBS Query"
+  },
+  "aboutPage": {
+    "label": "About KMC",
+    "title": "Healing lives, shaping doctors.",
+    "subtitle": "A unit of Shanti Foundation, established Feb 2012, operating under PPP mode with the Govt. of Uttar Pradesh.",
+    "ourStory": "Our story",
+    "storyText": "KMC Medical College and Hospital was founded to bridge the gap in accessible healthcare while nurturing the next generation of compassionate medical professionals. Affiliated with ABVMU University, we combine modern infrastructure with dedicated faculty.",
+    "leadership": "Leadership messages",
+    "leadershipDesc": "A message of vision, dedication and commitment to excellence in healthcare and education.",
+    "leaders": {
+      "chairman": "Chairman",
+      "ceo": "CEO",
+      "trustees": "Trustees",
+      "principal": "Principal / Dean",
+      "ms": "Medical Superintendent"
+    }
+  },
+  "newsPage": {
+    "label": "News & Events",
+    "title": "Moments from our campus.",
+    "tags": { "event": "Event", "camp": "Camp", "campus": "Campus", "milestone": "Milestone" }
+  },
+  "departmentsList": {
+    "anatomy": "Anatomy",
+    "physiology": "Physiology",
+    "biochemistry": "Biochemistry",
+    "microbiology": "Microbiology",
+    "pharmacology": "Pharmacology",
+    "pathology": "Pathology",
+    "forensic": "Forensic Medicine",
+    "community": "Community Medicine",
+    "generalMed": "General Medicine",
+    "dermatology": "Dermatology",
+    "psychiatry": "Psychiatry",
+    "pediatrics": "Pediatrics",
+    "generalSurg": "General Surgery",
+    "ortho": "Orthopaedics",
+    "ophthal": "Ophthalmology",
+    "ent": "ENT",
+    "obgy": "Obstetrics & Gynaecology",
+    "emergency": "Emergency Medicine",
+    "anaesth": "Anaesthesiology",
+    "radio": "Radiodiagnosis",
+    "dentistry": "Dentistry",
+    "physio": "Physiotherapy",
+    "gastro": "Gastrology",
+    "cardio": "Cardiology",
+    "neuro": "Neurology",
+    "uro": "Urology",
+    "plastic": "Plastic Surgery"
+  }
+}
