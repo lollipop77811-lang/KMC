@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import AnimatedText from '../components/AnimatedText';
 import MagneticButton from '../components/MagneticButton';
+import DNAHelix from '../components/DNAHelix';
 import { ArrowRight, Phone, Star, Heart, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
@@ -8,21 +9,27 @@ export default function Hero() {
   const key = i18n.language;
 
   return (
-    <section className="relative min-h-screen pt-36 pb-16 overflow-hidden bg-[var(--color-ivory)]">
-      <div className="absolute top-0 right-0 w-[55%] h-[70%] bg-[var(--color-mist)] rounded-bl-[40%] -z-0" />
-      <div className="absolute top-32 -left-32 w-96 h-96 bg-[var(--color-teal)]/10 rounded-full blur-3xl -z-0" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[var(--color-amber)]/10 rounded-full blur-3xl -z-0" />
+    <section className="relative min-h-screen pt-36 pb-16 overflow-hidden bg-[#0A1628]">
+      {/* DNA Double Helix Particle Animation Background */}
+      <DNAHelix />
+
+      {/* Subtle radial vignette for depth */}
+      <div className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(10,22,40,0.6) 100%)',
+        }}
+      />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-[var(--color-navy)] mb-8" key={key}>
+            <div className="text-white mb-8" key={key}>
               <AnimatedText text={t('hero.line1')} className="text-display block" delay={0.2} />
-              <AnimatedText text={t('hero.line2')} className="text-display block text-[var(--color-teal)]" delay={0.35} />
+              <AnimatedText text={t('hero.line2')} className="text-display block text-[#64FFDA]" delay={0.35} />
               <AnimatedText text={t('hero.line3')} className="text-display block" delay={0.5} />
             </div>
 
-            <p className="text-[var(--color-text-muted)] text-lg max-w-lg mb-10">
+            <p className="text-white/70 text-lg max-w-lg mb-10">
               {t('hero.subtitle')}
             </p>
 
@@ -38,50 +45,53 @@ export default function Hero() {
             <div className="flex items-center gap-6 mt-12">
               <div className="flex -space-x-3">
                 {[6129681, 6129115, 6129870, 32213424].map((id) => (
-                  <img key={id} src={`https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=80&w=80`} alt="" className="w-11 h-11 rounded-full border-2 border-white object-cover" />
+                  <img key={id} src={`https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=80&w=80`} alt="" className="w-11 h-11 rounded-full border-2 border-white/20 object-cover" />
                 ))}
               </div>
               <div>
-                <div className="flex items-center gap-1 text-[var(--color-amber)]">
+                <div className="flex items-center gap-1 text-[#F48FB1]">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                 </div>
-                <p className="text-sm text-[var(--color-text-muted)]">{t('hero.trustText')}</p>
+                <p className="text-sm text-white/60">{t('hero.trustText')}</p>
               </div>
             </div>
           </div>
 
+          {/* Right side: College video with glass-morphism card */}
           <div className="relative h-[420px] sm:h-[560px] flex items-center justify-center">
-            <div className="absolute inset-0 bg-[var(--color-teal)] animate-blob animate-float-slow overflow-hidden">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-90">
+            <div className="absolute inset-0 animate-blob animate-float-slow overflow-hidden rounded-2xl"
+              style={{ background: 'linear-gradient(135deg, rgba(0,191,165,0.15), rgba(244,143,177,0.15))' }}
+            >
+              <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-80">
                 <source src="/college.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-[var(--color-teal)]/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/60 to-transparent" />
             </div>
 
-            <div className="absolute -left-4 top-10 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float-slow" style={{ animationDelay: '1s' }}>
-              <div className="w-11 h-11 rounded-xl bg-[var(--color-coral)]/15 text-[var(--color-coral)] flex items-center justify-center"><Heart size={20} /></div>
+            <div className="absolute -left-4 top-10 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float-slow" style={{ animationDelay: '1s' }}>
+              <div className="w-11 h-11 rounded-xl bg-[#F48FB1]/20 text-[#FF80AB] flex items-center justify-center"><Heart size={20} /></div>
               <div>
-                <p className="font-serif font-bold text-xl text-[var(--color-navy)] leading-none">150+</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{t('hero.stats.beds')}</p>
+                <p className="font-serif font-bold text-xl text-white leading-none">150+</p>
+                <p className="text-xs text-white/60">{t('hero.stats.beds')}</p>
               </div>
             </div>
-            <div className="absolute -right-2 bottom-16 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float-slow" style={{ animationDelay: '2s' }}>
-              <div className="w-11 h-11 rounded-xl bg-[var(--color-teal)]/15 text-[var(--color-teal)] flex items-center justify-center"><ShieldCheck size={20} /></div>
+            <div className="absolute -right-2 bottom-16 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float-slow" style={{ animationDelay: '2s' }}>
+              <div className="w-11 h-11 rounded-xl bg-[#00BFA5]/20 text-[#64FFDA] flex items-center justify-center"><ShieldCheck size={20} /></div>
               <div>
-                <p className="font-serif font-bold text-xl text-[var(--color-navy)] leading-none">25+</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{t('hero.stats.departments')}</p>
+                <p className="font-serif font-bold text-xl text-white leading-none">25+</p>
+                <p className="text-xs text-white/60">{t('hero.stats.departments')}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-16 bg-[var(--color-navy)] py-4 overflow-hidden -rotate-1 scale-105">
+      <div className="mt-16 bg-[#0A1628] py-4 overflow-hidden -rotate-1 scale-105">
         <div className="flex whitespace-nowrap animate-marquee-x text-white/90 font-serif text-2xl italic">
           {[...Array(2)].map((_, k) => (
             <span key={k} className="flex">
               {(['rank1', 'rank2', 'rank3', 'rank4', 'rank5'] as const).map((r, i) => (
-                <span key={i} className="mx-8 flex items-center gap-8">{t(`hero.marquee.${r}`)} <span className="text-[var(--color-amber)]">✦</span></span>
+                <span key={i} className="mx-8 flex items-center gap-8">{t(`hero.marquee.${r}`)} <span className="text-[#FF80AB]">&#10022;</span></span>
               ))}
             </span>
           ))}
