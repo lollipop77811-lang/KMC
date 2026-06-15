@@ -22,12 +22,10 @@ interface NavLink {
   dropdown?: DropdownGroup[];
 }
 
-const BASE = 'https://kmcmedicalcollege.com';
-
 const nmcDropdown: DropdownGroup[] = [
   {
     key: 'nmc.deanMs',
-    items: [{ key: 'nmc.deanMsDetail', href: `${BASE}/dean&supretendent` }],
+    items: [{ key: 'nmc.deanMsDetail', href: '/dean-ms', internal: true }],
   },
   {
     key: 'nmc.staffDetails',
@@ -43,7 +41,7 @@ const nmcDropdown: DropdownGroup[] = [
   },
   {
     key: 'nmc.vcRegistrar',
-    items: [{ key: 'nmc.vcRegistrarLink', href: `${BASE}/vc&registrar` }],
+    items: [{ key: 'nmc.vcRegistrarLink', href: '/vc-registrar', internal: true }],
   },
   {
     key: 'nmc.institutionalCommittee',

@@ -392,5 +392,33 @@
   },
   "floating": {
     "bookAppointment": "Book Appointment"
+  },
+  "deanMs": {
+    "label": "NMC Information",
+    "title": "Dean & Medical Superintendent",
+    "subtitle": "Leadership and administrative heads of KMC Medical College & Hospital.",
+    "dean": "Dean",
+    "deanDesignation": "Dean and Professor in General Surgery",
+    "medicalSuperintendent": "Medical Superintendent",
+    "msDesignation": "Medical Superintendent",
+    "totalExp": "Total Experience",
+    "adminExp": "Admin Experience",
+    "education": "Education",
+    "qualifications": "Educational Qualifications",
+    "degree": "Qualification",
+    "institute": "Institute / University",
+    "year": "Year",
+    "contactInfo": "Contact Information",
+    "office": "Office"
+  },
+  "vcRegistrar": {
+    "label": "Affiliated University",
+    "title": "VC & Registrar",
+    "subtitle": "Vice Chancellor and Registrar of our affiliated university.",
+    "universityName": "Atal Bihari Vajpayee Medical University",
+    "vc": "Vice Chancellor",
+    "registrar": "Registrar",
+    "officials": "University Officials",
+    "note": "KMC Medical College & Hospital is affiliated to Atal Bihari Vajpayee Medical University, U.P. Lucknow."
   }
 }

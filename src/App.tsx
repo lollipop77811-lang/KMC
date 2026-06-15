@@ -17,6 +17,8 @@ import Facilities from './pages/Facilities';
 import Admissions from './pages/Admissions';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import DeanMs from './pages/DeanMs';
+import VcRegistrar from './pages/VcRegistrar';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -76,6 +78,8 @@ function MainLayout() {
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/dean-ms" element={<DeanMs />} />
+            <Route path="/vc-registrar" element={<VcRegistrar />} />
           </Routes>
         </PageTransition>
       </AnimatePresence>
