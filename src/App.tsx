@@ -13,8 +13,6 @@ import Departments from './pages/Departments';
 import DepartmentPage from './pages/DepartmentPage';
 import Hospital from './pages/Hospital';
 import HospitalService from './pages/HospitalService';
-import InfoNMC from './pages/InfoNMC';
-import InfoMSR from './pages/InfoMSR';
 import Facilities from './pages/Facilities';
 import Admissions from './pages/Admissions';
 import News from './pages/News';
@@ -74,8 +72,6 @@ function MainLayout() {
             <Route path="/departments/:slug" element={<DepartmentPage />} />
             <Route path="/hospital" element={<Hospital />} />
             <Route path="/hospital/:slug" element={<HospitalService />} />
-            <Route path="/info-nmc" element={<InfoNMC />} />
-            <Route path="/info-msr" element={<InfoMSR />} />
             <Route path="/facilities" element={<Facilities />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/news" element={<News />} />
