@@ -21,51 +21,47 @@ interface NavLink {
   dropdown?: DropdownGroup[];
 }
 
-const BASE = 'https://kmcmedicalcollege.com';
-
 const nmcDropdown: DropdownGroup[] = [
   {
     key: 'nmc.deanMs',
-    items: [{ key: 'nmc.deanMsDetail', href: `${BASE}/dean&supretendent` }],
+    items: [{ key: 'nmc.deanMsDetail', href: '/assets/pdf/Teaching Staff.pdf' }],
   },
   {
     key: 'nmc.staffDetails',
     items: [
-      { key: 'nmc.facultyUgMsr', href: `${BASE}/assets/pdf/Teaching Staff.pdf` },
-      { key: 'nmc.nursingStaff', href: `${BASE}/assets/pdf/Nursing Staff List.pdf` },
-      { key: 'nmc.nonTeachingStaff', href: `${BASE}/assets/pdf/NonTeachingStaff.pdf` },
+      { key: 'nmc.facultyUgMsr', href: '/assets/pdf/Teaching Staff.pdf' },
+      { key: 'nmc.nursingStaff', href: '/assets/pdf/Nursing Staff List.pdf' },
+      { key: 'nmc.nonTeachingStaff', href: '/assets/pdf/NonTeachingStaff.pdf' },
     ],
   },
   {
     key: 'nmc.bedDistribution',
-    items: [{ key: 'nmc.bedDistributionPdf', href: `${BASE}/assets/pdf/BedDistribution.pdf` }],
+    items: [{ key: 'nmc.bedDistributionPdf', href: '/assets/pdf/BedDistribution.pdf' }],
   },
   {
     key: 'nmc.vcRegistrar',
-    items: [{ key: 'nmc.vcRegistrarLink', href: `${BASE}/vc&registrar` }],
+    items: [{ key: 'nmc.vcRegistrarLink', href: '/assets/pdf/ABVMU_Affiliation.pdf' }],
   },
   {
     key: 'nmc.institutionalCommittee',
     items: [
-      { key: 'nmc.genderHarassment', href: `${BASE}/assets/pdf/COMMITTEE_FOR_PREVENTION_OF_GENDER_HARASSMENT.pdf` },
-      { key: 'nmc.collegeCouncil', href: `${BASE}/assets/pdf/COLLEGE_COUNCIL_COMMITTEE.pdf` },
-      { key: 'nmc.antiRagging', href: `${BASE}/assets/pdf/ANTI_RAGGING_COMMITTEE.pdf` },
-      { key: 'nmc.antiRaggingSquad', href: `${BASE}/assets/pdf/Anti_Ranging_Squad.pdf` },
-      { key: 'nmc.infectionControl', href: `${BASE}/assets/pdf/HOSPITAL_INFECTION_CONTROL_COMMITTE.pdf` },
-      { key: 'nmc.studentAffairs', href: `${BASE}/assets/pdf/student_affairs_hostel_committies.pdf` },
-      { key: 'nmc.pharmacovigilance', href: `${BASE}/assets/pdf/PHARMAVIGILANCE_COMMITTEE.pdf` },
-      { key: 'nmc.curriculumCommittee', href: `${BASE}/assets/pdf/CURRICULAM_COMMITTE.pdf` },
-      { key: 'nmc.medicalEducation', href: `${BASE}/assets/pdf/medical_education_unit.pdf` },
-      { key: 'nmc.medicalResearch', href: `${BASE}/assets/pdf/medicalresearchcommittee.pdf` },
+      { key: 'nmc.genderHarassment', href: '/assets/pdf/COMMITTEE_FOR_PREVENTION_OF_GENDER_HARASSMENT.pdf' },
+      { key: 'nmc.collegeCouncil', href: '/assets/pdf/COLLEGE_COUNCIL_COMMITTEE.pdf' },
+      { key: 'nmc.antiRagging', href: '/assets/pdf/ANTI_RAGGING_COMMITTEE.pdf' },
+      { key: 'nmc.antiRaggingSquad', href: '/assets/pdf/Anti_Ranging_Squad.pdf' },
+      { key: 'nmc.infectionControl', href: '/assets/pdf/HOSPITAL_INFECTION_CONTROL_COMMITTE.pdf' },
+      { key: 'nmc.studentAffairs', href: '/assets/pdf/student_affairs_hostel_committies.pdf' },
+      { key: 'nmc.pharmacovigilance', href: '/assets/pdf/PHARMAVIGILANCE_COMMITTEE.pdf' },
+      { key: 'nmc.curriculumCommittee', href: '/assets/pdf/CURRICULAM_COMMITTE.pdf' },
+      { key: 'nmc.medicalEducation', href: '/assets/pdf/medical_education_unit.pdf' },
+      { key: 'nmc.medicalResearch', href: '/assets/pdf/medicalresearchcommittee.pdf' },
     ],
   },
   {
     key: 'nmc.recognition',
     items: [
-      { key: 'nmc.recognitionStatus', href: `${BASE}/assets/pdf/Recognition Status.pdf` },
-      { key: 'nmc.lop', href: `${BASE}/assets/pdf/LOP.pdf` },
-      { key: 'nmc.lor', href: `${BASE}/assets/pdf/LOR.pdf` },
-      { key: 'nmc.clinicalMaterial', href: `${BASE}/assets/pdf/Clinical Material.pdf` },
+      { key: 'nmc.lop', href: '/assets/pdf/LOP.pdf' },
+      { key: 'nmc.clinicalMaterial', href: '/assets/pdf/Clinical Material.pdf' },
     ],
   },
 ];
@@ -74,12 +70,12 @@ const msrDropdown: DropdownGroup[] = [
   {
     key: 'msr.group',
     items: [
-      { key: 'msr.collegeInfo', href: `${BASE}/assets/pdf/Collegeinfombbs.pdf` },
-      { key: 'msr.deptFaculty', href: `${BASE}/assets/pdf/Departmentwise.pdf` },
-      { key: 'msr.cmeProgram', href: `${BASE}/assets/pdf/cme.pdf` },
-      { key: 'msr.publication', href: `${BASE}/assets/pdf/Publicationmbbs.pdf` },
-      { key: 'msr.universityAffiliation', href: `${BASE}/assets/pdf/ABVMU_Affiliation.pdf` },
-      { key: 'msr.essentialCertificate', href: `${BASE}/assets/pdf/Essentiality_Certificate.pdf` },
+      { key: 'msr.collegeInfo', href: '/assets/pdf/Collegeinfombbs.pdf' },
+      { key: 'msr.deptFaculty', href: '/assets/pdf/Departmentwise.pdf' },
+      { key: 'msr.cmeProgram', href: '/assets/pdf/cme.pdf' },
+      { key: 'msr.publication', href: '/assets/pdf/Publicationmbbs.pdf' },
+      { key: 'msr.universityAffiliation', href: '/assets/pdf/ABVMU_Affiliation.pdf' },
+      { key: 'msr.essentialCertificate', href: '/assets/pdf/Essentiality_Certificate.pdf' },
     ],
   },
 ];
