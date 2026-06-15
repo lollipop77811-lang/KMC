@@ -11,7 +11,9 @@
     "emergency": "Emergency",
     "bookAppointment": "Book Appointment",
     "collegeHospital": "College & Hospital",
-    "brandName": "KMC Medical College"
+    "brandName": "KMC Medical College",
+    "infoNmc": "Info NMC-1.3",
+    "infoMsr": "Info MSR 2023"
   },
   "hero": {
     "badge": "NABH Accredited · Maharajganj, Uttar Pradesh",
@@ -291,5 +293,66 @@
     "neuro": "Neurology",
     "uro": "Urology",
     "plastic": "Plastic Surgery"
+  },
+  "infoNmc": {
+    "label": "NMC Compliance",
+    "title": "NMC-1.3 Information",
+    "subtitle": "Fully compliant with National Medical Commission regulations and standards.",
+    "intro": "KMC Medical College & Hospital is fully compliant with the National Medical Commission (NMC) Minimum Standard Requirements 1.3, ensuring the highest quality of medical education, infrastructure, and patient care. Our commitment to these standards reflects our dedication to producing competent medical professionals and delivering exceptional healthcare services.",
+    "complianceTitle": "NMC Compliance",
+    "complianceDesc": "KMC meets all the requirements stipulated by the NMC for medical colleges, including infrastructure, faculty, clinical material, and training standards mandated under the NMC Act 2019.",
+    "regulationsTitle": "Regulatory Adherence",
+    "regulationsDesc": "We strictly follow the regulations and guidelines laid down by the NMC for undergraduate medical education, ensuring a robust curriculum aligned with national standards and competency-based medical education (CBME) framework.",
+    "facultyTitle": "Faculty Standards",
+    "facultyDesc": "Our college maintains the required student-to-faculty ratio with highly qualified professors, associate professors, and assistant professors across all departments as mandated by NMC norms.",
+    "curriculumTitle": "CBME Curriculum",
+    "curriculumDesc": "Our MBBS program follows the Competency-Based Medical Education (CBME) curriculum designed by the NMC, focusing on practical skills, clinical exposure, and holistic development of future doctors.",
+    "accreditationTitle": "Accreditation & Recognition",
+    "accreditationDesc": "KMC holds all necessary recognitions and accreditations from the NMC and is affiliated with ABVMU University, ensuring our degrees are recognized nationwide.",
+    "governanceTitle": "Governance & Transparency",
+    "governanceDesc": "We maintain full transparency in governance, with regularly updated institutional data, compliance reports, and committee structures as required by the NMC for all recognized medical colleges.",
+    "documentsTitle": "NMC Documents & Resources",
+    "documentsDesc": "Access important NMC-related documents, compliance reports, and institutional disclosures below:",
+    "doc1": "NMC Essentiality Certificate",
+    "doc2": "NMC Permission Letter for MBBS Admissions",
+    "doc3": "Annual Compliance Report",
+    "doc4": "Faculty & Staff Declaration",
+    "doc5": "Infrastructure & Facility Audit Report"
+  },
+  "infoMsr": {
+    "label": "MSR 2023",
+    "title": "Medical School Regulations 2023",
+    "subtitle": "KMC's compliance with the latest Medical School Regulations and standards.",
+    "intro": "KMC Medical College & Hospital adheres to the Medical School Regulations (MSR) 2023, which set the benchmark for medical education infrastructure, faculty requirements, clinical training facilities, and institutional governance. Our institution has invested significantly in meeting and exceeding these standards.",
+    "statBeds": "Hospital Beds",
+    "statBedsVal": "700+",
+    "statDepts": "Departments",
+    "statDeptsVal": "25+",
+    "statSeats": "MBBS Seats",
+    "statSeatsVal": "100",
+    "statFaculty": "Faculty Members",
+    "statFacultyVal": "150+",
+    "statPatients": "Annual Patients",
+    "statPatientsVal": "10K+",
+    "statGrowth": "Year-over-Year Growth",
+    "statGrowthVal": "15%",
+    "highlightsLabel": "Key Highlights",
+    "highlightsTitle": "MSR 2023 Compliance Highlights",
+    "highlights": [
+      "State-of-the-art infrastructure with modern lecture theatres equipped with advanced audio-visual aids and smart classroom technology.",
+      "Comprehensive clinical laboratory facilities with cutting-edge diagnostic equipment and research-grade instruments.",
+      "Well-stocked central library with over 15,000 medical books, national and international journals, and digital database access.",
+      "Dedicated skill lab with simulation mannequins for hands-on procedural training across all clinical specialties.",
+      "Fully functional 700+ bed teaching hospital with diverse patient population providing adequate clinical material for training.",
+      "Qualified and experienced faculty meeting NMC-prescribed student-to-teacher ratios across all academic departments.",
+      "Modern hostel facilities with comfortable accommodations, mess facilities, recreational areas, and sports grounds.",
+      "Robust research infrastructure with institutional ethics committee and ongoing research projects across departments."
+    ],
+    "downloadTitle": "Download MSR 2023 Report",
+    "downloadDesc": "Access the complete Medical School Regulations 2023 compliance document for KMC Medical College & Hospital.",
+    "downloadBtn": "Download Report"
+  },
+  "floating": {
+    "bookAppointment": "Book Appointment"
   }
 }

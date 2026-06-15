@@ -17,6 +17,8 @@ export default function Navbar() {
     { key: 'about', path: '/about' },
     { key: 'departments', path: '/departments' },
     { key: 'hospital', path: '/hospital' },
+    { key: 'infoNmc', path: '/info-nmc' },
+    { key: 'infoMsr', path: '/info-msr' },
     { key: 'facilities', path: '/facilities' },
     { key: 'admissions', path: '/admissions' },
     { key: 'news', path: '/news' },
