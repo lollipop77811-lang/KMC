@@ -8,6 +8,7 @@ import LanguageToggle from './LanguageToggle';
 interface DropdownItem {
   key: string;
   href?: string;
+  internal?: boolean; // if true, use React Router Link instead of <a>
 }
 
 interface DropdownGroup {
@@ -21,48 +22,61 @@ interface NavLink {
   dropdown?: DropdownGroup[];
 }
 
+const BASE = 'https://kmcmedicalcollege.com';
+
 const nmcDropdown: DropdownGroup[] = [
   {
     key: 'nmc.deanMs',
-    items: [{ key: 'nmc.deanMsDetail', href: '/assets/pdf/Teaching Staff.pdf' }],
+    items: [{ key: 'nmc.deanMsDetail', href: `${BASE}/dean&supretendent` }],
   },
   {
     key: 'nmc.staffDetails',
     items: [
-      { key: 'nmc.facultyUgMsr', href: '/assets/pdf/Teaching Staff.pdf' },
-      { key: 'nmc.nursingStaff', href: '/assets/pdf/Nursing Staff List.pdf' },
-      { key: 'nmc.nonTeachingStaff', href: '/assets/pdf/NonTeachingStaff.pdf' },
+      { key: 'nmc.facultyUgMsr', href: '/pdfs/Teaching Staff.pdf' },
+      { key: 'nmc.nursingStaff', href: '/pdfs/Nursing Staff List.pdf' },
+      { key: 'nmc.nonTeachingStaff', href: '/pdfs/NonTeachingStaff.pdf' },
     ],
   },
   {
     key: 'nmc.bedDistribution',
-    items: [{ key: 'nmc.bedDistributionPdf', href: '/assets/pdf/BedDistribution.pdf' }],
+    items: [{ key: 'nmc.bedDistributionPdf', href: '/pdfs/BedDistribution.pdf' }],
   },
   {
     key: 'nmc.vcRegistrar',
-    items: [{ key: 'nmc.vcRegistrarLink', href: '/assets/pdf/ABVMU_Affiliation.pdf' }],
+    items: [{ key: 'nmc.vcRegistrarLink', href: `${BASE}/vc&registrar` }],
   },
   {
     key: 'nmc.institutionalCommittee',
     items: [
-      { key: 'nmc.genderHarassment', href: '/assets/pdf/COMMITTEE_FOR_PREVENTION_OF_GENDER_HARASSMENT.pdf' },
-      { key: 'nmc.collegeCouncil', href: '/assets/pdf/COLLEGE_COUNCIL_COMMITTEE.pdf' },
-      { key: 'nmc.antiRagging', href: '/assets/pdf/ANTI_RAGGING_COMMITTEE.pdf' },
-      { key: 'nmc.antiRaggingSquad', href: '/assets/pdf/Anti_Ranging_Squad.pdf' },
-      { key: 'nmc.infectionControl', href: '/assets/pdf/HOSPITAL_INFECTION_CONTROL_COMMITTE.pdf' },
-      { key: 'nmc.studentAffairs', href: '/assets/pdf/student_affairs_hostel_committies.pdf' },
-      { key: 'nmc.pharmacovigilance', href: '/assets/pdf/PHARMAVIGILANCE_COMMITTEE.pdf' },
-      { key: 'nmc.curriculumCommittee', href: '/assets/pdf/CURRICULAM_COMMITTE.pdf' },
-      { key: 'nmc.medicalEducation', href: '/assets/pdf/medical_education_unit.pdf' },
-      { key: 'nmc.medicalResearch', href: '/assets/pdf/medicalresearchcommittee.pdf' },
+      { key: 'nmc.genderHarassment', href: '/pdfs/COMMITTEE_FOR_PREVENTION_OF_GENDER_HARASSMENT.pdf' },
+      { key: 'nmc.collegeCouncil', href: '/pdfs/COLLEGE_COUNCIL_COMMITTEE.pdf' },
+      { key: 'nmc.antiRagging', href: '/pdfs/ANTI_RAGGING_COMMITTEE.pdf' },
+      { key: 'nmc.antiRaggingSquad', href: '/pdfs/Anti_Ranging_Squad.pdf' },
+      { key: 'nmc.infectionControl', href: '/pdfs/HOSPITAL_INFECTION_CONTROL_COMMITTE.pdf' },
+      { key: 'nmc.studentAffairs', href: '/pdfs/student_affairs_hostel_committies.pdf' },
+      { key: 'nmc.pharmacovigilance', href: '/pdfs/PHARMAVIGILANCE_COMMITTEE.pdf' },
+      { key: 'nmc.curriculumCommittee', href: '/pdfs/CURRICULAM_COMMITTE.pdf' },
+      { key: 'nmc.medicalEducation', href: '/pdfs/medical_education_unit.pdf' },
+      { key: 'nmc.medicalResearch', href: '/pdfs/medicalresearchcommittee.pdf' },
     ],
   },
   {
     key: 'nmc.recognition',
     items: [
-      { key: 'nmc.lop', href: '/assets/pdf/LOP.pdf' },
-      { key: 'nmc.clinicalMaterial', href: '/assets/pdf/Clinical Material.pdf' },
+      { key: 'nmc.lop', href: '/pdfs/LOP.pdf' },
     ],
+  },
+  {
+    key: 'nmc.clinicalMaterial',
+    items: [{ key: 'nmc.clinicalMaterialPdf', href: '/pdfs/Clinical Material.pdf' }],
+  },
+  {
+    key: 'nmc.aebasAttendance',
+    items: [{ key: 'nmc.aebasAttendanceLink', href: 'https://kmcmahup.nmcindia.ac.in/' }],
+  },
+  {
+    key: 'nmc.tollFreeInfo',
+    items: [{ key: 'nmc.tollFreeInfoLink', href: '/contact', internal: true }],
   },
 ];
 
@@ -70,12 +84,12 @@ const msrDropdown: DropdownGroup[] = [
   {
     key: 'msr.group',
     items: [
-      { key: 'msr.collegeInfo', href: '/assets/pdf/Collegeinfombbs.pdf' },
-      { key: 'msr.deptFaculty', href: '/assets/pdf/Departmentwise.pdf' },
-      { key: 'msr.cmeProgram', href: '/assets/pdf/cme.pdf' },
-      { key: 'msr.publication', href: '/assets/pdf/Publicationmbbs.pdf' },
-      { key: 'msr.universityAffiliation', href: '/assets/pdf/ABVMU_Affiliation.pdf' },
-      { key: 'msr.essentialCertificate', href: '/assets/pdf/Essentiality_Certificate.pdf' },
+      { key: 'msr.collegeInfo', href: '/pdfs/Collegeinfombbs.pdf' },
+      { key: 'msr.deptFaculty', href: '/pdfs/Departmentwise.pdf' },
+      { key: 'msr.cmeProgram', href: '/pdfs/cme.pdf' },
+      { key: 'msr.publication', href: '/pdfs/Publicationmbbs.pdf' },
+      { key: 'msr.universityAffiliation', href: '/pdfs/ABVMU_Affiliation.pdf' },
+      { key: 'msr.essentialCertificate', href: '/pdfs/Essentiality_Certificate.pdf' },
     ],
   },
 ];
@@ -182,18 +196,35 @@ export default function Navbar() {
                                   <div className="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--color-teal)] bg-[var(--color-mist)]/60">
                                     {t(`navDropdown.${group.key}`)}
                                   </div>
-                                  {group.items.map((item) => (
-                                    <a
-                                      key={item.key}
-                                      href={item.href}
-                                      target="_blank"
-                                      rel="noreferrer"
-                                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-[var(--color-text)] hover:bg-[var(--color-teal)]/5 hover:text-[var(--color-teal)] transition-colors group/item"
-                                    >
-                                      <span className="flex-1">{t(`navDropdown.${item.key}`)}</span>
-                                      <ExternalLink size={12} className="text-[var(--color-text-muted)] group-hover/item:text-[var(--color-teal)] opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                                    </a>
-                                  ))}
+                                  {group.items.map((item) => {
+                                    const isInternal = item.internal;
+                                    const isPdf = item.href?.endsWith('.pdf');
+                                    const linkClass = "flex items-center gap-2.5 px-4 py-2.5 text-sm text-[var(--color-text)] hover:bg-[var(--color-teal)]/5 hover:text-[var(--color-teal)] transition-colors group/item";
+                                    if (isInternal) {
+                                      return (
+                                        <Link
+                                          key={item.key}
+                                          to={item.href!}
+                                          onClick={() => setActiveDropdown(null)}
+                                          className={linkClass}
+                                        >
+                                          <span className="flex-1">{t(`navDropdown.${item.key}`)}</span>
+                                        </Link>
+                                      );
+                                    }
+                                    return (
+                                      <a
+                                        key={item.key}
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={linkClass}
+                                      >
+                                        <span className="flex-1">{t(`navDropdown.${item.key}`)}</span>
+                                        <ExternalLink size={12} className="text-[var(--color-text-muted)] group-hover/item:text-[var(--color-teal)] opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                      </a>
+                                    );
+                                  })}
                                 </div>
                               ))}
                             </div>
@@ -287,17 +318,31 @@ export default function Navbar() {
                                 <div className="text-xs uppercase tracking-[0.15em] text-[var(--color-teal-light)] font-bold mb-2">
                                   {t(`navDropdown.${group.key}`)}
                                 </div>
-                                {group.items.map((item) => (
-                                  <a
-                                    key={item.key}
-                                    href={item.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="block py-1.5 text-lg text-white/70 hover:text-white transition-colors"
-                                  >
-                                    {t(`navDropdown.${item.key}`)}
-                                  </a>
-                                ))}
+                                {group.items.map((item) => {
+                                  if (item.internal) {
+                                    return (
+                                      <Link
+                                        key={item.key}
+                                        to={item.href!}
+                                        onClick={() => { setOpen(false); setMobileSubmenu(null); }}
+                                        className="block py-1.5 text-lg text-white/70 hover:text-white transition-colors"
+                                      >
+                                        {t(`navDropdown.${item.key}`)}
+                                      </Link>
+                                    );
+                                  }
+                                  return (
+                                    <a
+                                      key={item.key}
+                                      href={item.href}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="block py-1.5 text-lg text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {t(`navDropdown.${item.key}`)}
+                                    </a>
+                                  );
+                                })}
                               </div>
                             ))}
                           </motion.div>
