@@ -74,16 +74,19 @@
     "viewAll": "View all",
     "exploreAll": "Explore all 25+ departments",
     "items": {
-      "generalMed": "General Medicine",
-      "pediatrics": "Pediatrics",
-      "cardiology": "Cardiology",
-      "orthopaedics": "Orthopaedics",
+      "pathology": "Pathology",
+      "physiology": "Physiology",
+      "psychiatry": "Psychiatry",
+      "anaesth": "Anaesthesiology",
+      "microbiology": "Microbiology",
+      "community": "Community Medicine",
       "anatomy": "Anatomy"
     },
     "categories": {
       "clinical": "Clinical",
       "superSpec": "Super Speciality",
-      "preClinical": "Pre-Clinical"
+      "preClinical": "Pre-Clinical",
+      "paraClinical": "Para-Clinical"
     }
   },
   "hospital": {

@@ -74,16 +74,19 @@
     "viewAll": "सभी देखें",
     "exploreAll": "सभी 25+ विभाग देखें",
     "items": {
-      "generalMed": "सामान्य चिकित्सा",
-      "pediatrics": "बाल रोग",
-      "cardiology": "हृदय रोग",
-      "orthopaedics": "हड्डी रोग",
+      "pathology": "विकृति विज्ञान",
+      "physiology": "शरीर विज्ञान",
+      "psychiatry": "मनोरोग",
+      "anaesth": "एनेस्थीसियोलॉजी",
+      "microbiology": "सूक्ष्म जीव विज्ञान",
+      "community": "सामुदायिक चिकित्सा",
       "anatomy": "शरीर रचना"
     },
     "categories": {
       "clinical": "क्लिनिकल",
       "superSpec": "सुपर स्पेशियलिटी",
-      "preClinical": "प्री-क्लिनिकल"
+      "preClinical": "प्री-क्लिनिकल",
+      "paraClinical": "पैरा-क्लिनिकल"
     }
   },
   "hospital": {

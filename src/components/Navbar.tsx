@@ -10,6 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const loc = useLocation();
   const { t } = useTranslation();
+  const isHome = loc.pathname === '/';
 
   const links = [
     { key: 'home', path: '/' },
@@ -35,9 +36,9 @@ export default function Navbar() {
       <div className="fixed top-0 left-0 w-full z-[100] flex justify-center px-4 pt-4">
         <header
           className={`w-full max-w-7xl rounded-2xl transition-all duration-500 ${
-            scrolled
+            scrolled || !isHome
               ? 'bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgba(15,118,110,0.10)] py-3'
-              : 'bg-white/40 backdrop-blur-md py-4'
+              : 'bg-transparent py-4'
           }`}
         >
           <div className="px-5 md:px-7 flex items-center justify-between gap-3">
@@ -53,7 +54,7 @@ export default function Navbar() {
                     key={l.key}
                     to={l.path}
                     className={`relative px-2.5 xl:px-4 py-2 rounded-full text-xs xl:text-sm font-sans font-semibold transition-colors whitespace-nowrap ${
-                      active ? 'text-white' : 'text-[var(--color-navy)] hover:text-[var(--color-teal)]'
+                      active ? 'text-white' : `${scrolled || !isHome ? 'text-[var(--color-navy)]' : 'text-white/90'} hover:text-[var(--color-teal)]`
                     }`}
                   >
                     {active && (
@@ -70,7 +71,7 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-2 xl:gap-3">
-              <LanguageToggle />
+              <LanguageToggle dark={isHome && !scrolled} />
               <a
                 href="tel:05523350400"
                 className="flex items-center justify-center w-9 h-9 xl:w-11 xl:h-11 rounded-full bg-[var(--color-coral)] text-white shadow-lg shadow-[var(--color-coral)]/30 hover:shadow-[var(--color-coral)]/50 hover:scale-110 transition-all duration-300 cursor-grow group relative shrink-0"
@@ -88,8 +89,8 @@ export default function Navbar() {
             </div>
 
             <div className="lg:hidden flex items-center gap-2">
-              <LanguageToggle />
-              <button className="p-2 text-[var(--color-navy)]" onClick={() => setOpen(!open)}>
+              <LanguageToggle dark={isHome && !scrolled} />
+              <button className={`p-2 ${scrolled || !isHome ? 'text-[var(--color-navy)]' : 'text-white'}`} onClick={() => setOpen(!open)}>
                 {open ? <X size={26} /> : <Menu size={26} />}
               </button>
             </div>
