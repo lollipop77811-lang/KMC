@@ -188,18 +188,21 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.96 }}
                             transition={{ duration: 0.2, ease: 'easeOut' }}
-                            className="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-[0_12px_40px_rgba(15,41,66,0.15)] border border-[var(--color-sage)] overflow-hidden"
+                            className={`absolute top-full mt-2 bg-white rounded-2xl shadow-[0_12px_40px_rgba(15,41,66,0.15)] border border-[var(--color-sage)] overflow-hidden ${
+                              l.key === 'infoNmc'
+                                ? 'left-1/2 -translate-x-1/2 w-[680px]'
+                                : 'left-0 w-72'
+                            }`}
                           >
-                            <div className="max-h-[70vh] overflow-y-auto py-2">
+                            <div className={`py-2 ${l.key === 'infoNmc' ? 'grid grid-cols-3 gap-x-1' : ''}`}>
                               {l.dropdown!.map((group) => (
-                                <div key={group.key}>
-                                  <div className="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--color-teal)] bg-[var(--color-mist)]/60">
+                                <div key={group.key} className={l.key === 'infoNmc' ? 'min-w-0' : ''}>
+                                  <div className="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--color-teal)] bg-[var(--color-mist)]/60 whitespace-nowrap">
                                     {t(`navDropdown.${group.key}`)}
                                   </div>
                                   {group.items.map((item) => {
                                     const isInternal = item.internal;
-                                    const isPdf = item.href?.endsWith('.pdf');
-                                    const linkClass = "flex items-center gap-2.5 px-4 py-2.5 text-sm text-[var(--color-text)] hover:bg-[var(--color-teal)]/5 hover:text-[var(--color-teal)] transition-colors group/item";
+                                    const linkClass = "flex items-center gap-2 px-4 py-2 text-[13px] text-[var(--color-text)] hover:bg-[var(--color-teal)]/5 hover:text-[var(--color-teal)] transition-colors group/item";
                                     if (isInternal) {
                                       return (
                                         <Link
@@ -208,7 +211,7 @@ export default function Navbar() {
                                           onClick={() => setActiveDropdown(null)}
                                           className={linkClass}
                                         >
-                                          <span className="flex-1">{t(`navDropdown.${item.key}`)}</span>
+                                          <span className="flex-1 truncate">{t(`navDropdown.${item.key}`)}</span>
                                         </Link>
                                       );
                                     }
@@ -220,8 +223,8 @@ export default function Navbar() {
                                         rel="noreferrer"
                                         className={linkClass}
                                       >
-                                        <span className="flex-1">{t(`navDropdown.${item.key}`)}</span>
-                                        <ExternalLink size={12} className="text-[var(--color-text-muted)] group-hover/item:text-[var(--color-teal)] opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                        <span className="flex-1 truncate">{t(`navDropdown.${item.key}`)}</span>
+                                        <ExternalLink size={11} className="shrink-0 text-[var(--color-text-muted)] group-hover/item:text-[var(--color-teal)] opacity-0 group-hover/item:opacity-100 transition-opacity" />
                                       </a>
                                     );
                                   })}
