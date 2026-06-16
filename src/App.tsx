@@ -19,6 +19,7 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import DeanMs from './pages/DeanMs';
 import VcRegistrar from './pages/VcRegistrar';
+import BookAppointment from './pages/BookAppointment';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -80,6 +81,7 @@ function MainLayout() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/dean-ms" element={<DeanMs />} />
             <Route path="/vc-registrar" element={<VcRegistrar />} />
+            <Route path="/book-appointment" element={<BookAppointment />} />
           </Routes>
         </PageTransition>
       </AnimatePresence>

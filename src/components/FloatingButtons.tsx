@@ -7,7 +7,7 @@ export default function FloatingButtons() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       <Link
-        to="/contact"
+        to="/book-appointment"
         className="pill-btn bg-[var(--color-teal)] text-white hover:bg-[var(--color-teal-dark)] shadow-lg shadow-[var(--color-teal)]/30 hover:shadow-[var(--color-teal)]/50 hover:scale-105 transition-all duration-300 cursor-grow text-sm px-6 py-3"
       >
         <CalendarPlus size={18} />
